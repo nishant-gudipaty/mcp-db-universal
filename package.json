@@ -1,0 +1,70 @@
+{
+  "name": "fm-db-mcp-universal",
+  "version": "1.0.0",
+  "description": "DB-agnostic MCP server for Claude and GitHub Copilot — supports Postgres, MySQL, MSSQL, SQLite, Oracle",
+  "main": "dist/index.js",
+  "bin": {
+    "fm-db-mcp-universal": "./dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "npx tsx src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "database",
+    "sql",
+    "claude",
+    "copilot",
+    "postgres",
+    "mysql",
+    "mssql",
+    "oracle",
+    "sqlite"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "knex": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "better-sqlite3": "*",
+    "mssql": "*",
+    "mysql2": "*",
+    "oracledb": "^6.10.0",
+    "pg": "*"
+  },
+  "peerDependenciesMeta": {
+    "pg": {
+      "optional": true
+    },
+    "mysql2": {
+      "optional": true
+    },
+    "mssql": {
+      "optional": true
+    },
+    "better-sqlite3": {
+      "optional": true
+    },
+    "oracledb": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ]
+}
