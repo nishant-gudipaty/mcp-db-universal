@@ -19,7 +19,7 @@ A database-agnostic **MCP (Model Context Protocol) server** that lets you chat w
 ### 1. Install globally
 
 ```bash
-npm install -g mcp-db-universal
+npm install -g fm-db-mcp-universa
 
 # Then install your DB driver:
 npm install -g pg           # PostgreSQL
