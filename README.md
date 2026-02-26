@@ -36,15 +36,16 @@ Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) o
 ```json
 {
   "mcpServers": {
-    "my-database": {
-      "command": "mcp-db-universal",
+    "my-db": {
+      "command": "npx",
+      "args": ["fm-db-mcp-universal"],
       "env": {
-        "DB_CLIENT":   "postgres",
+        "DB_CLIENT":   "oracle",
         "DB_HOST":     "localhost",
-        "DB_PORT":     "5432",
-        "DB_USER":     "myuser",
-        "DB_PASSWORD": "mypassword",
-        "DB_NAME":     "mydb"
+        "DB_PORT":     "1521",
+        "DB_NAME":     "orcl",
+        "DB_USER":     "xxx",
+        "DB_PASSWORD": "xxx"
       }
     }
   }
@@ -58,15 +59,16 @@ Create `.vscode/mcp.json` in your workspace:
 ```json
 {
   "servers": {
-    "my-database": {
-      "command": "mcp-db-universal",
+    "fmcprod-db": {
+      "command": "npx",
+      "args": ["fm-db-mcp-universal"],
       "env": {
-        "DB_CLIENT":   "mssql",
+        "DB_CLIENT":   "oracle",
         "DB_HOST":     "localhost",
-        "DB_PORT":     "1433",
-        "DB_USER":     "sa",
-        "DB_PASSWORD": "YourPassword123",
-        "DB_NAME":     "Northwind"
+        "DB_PORT":     "1521",
+        "DB_NAME":     "orcl",
+        "DB_USER":     "xxx",
+        "DB_PASSWORD": "xxx"
       }
     }
   }
