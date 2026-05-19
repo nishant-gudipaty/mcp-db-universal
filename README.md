@@ -16,6 +16,21 @@ A database-agnostic **MCP (Model Context Protocol) server** that lets you chat w
 
 ## Quick Start
 
+### 0. Prerequisites — Install Node.js
+
+This tool runs on **Node.js**. If you don't have it installed, do that first:
+
+1. Go to **[nodejs.org](https://nodejs.org)** and download the **LTS** version (recommended for most users)
+2. Run the installer and follow the prompts
+3. Once installed, open a terminal (Command Prompt / PowerShell on Windows, Terminal on macOS/Linux) and verify it worked:
+
+```bash
+node --version   # should print something like v20.x.x
+npm --version    # should print something like 10.x.x
+```
+
+If both commands return version numbers, you're good to go
+
 ### 1. Install globally
 
 ```bash
@@ -31,7 +46,7 @@ npm install -g oracledb     # Oracle
 
 ### 2. Connect to Claude Desktop
 
-Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `C:\Users\<username>\AppData\Roaming\Claude\claude_desktop_config.json` (Windows):
 
 ```json
 {
