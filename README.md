@@ -39,7 +39,7 @@ npm install -g fm-db-mcp-universa
 # Then install your DB driver:
 npm install -g pg           # PostgreSQL
 npm install -g mysql2       # MySQL
-npm install -g mssql        # SQL Server
+npm install -g mssql tedious # SQL Server
 npm install -g better-sqlite3  # SQLite
 npm install -g oracledb     # Oracle
 ```
