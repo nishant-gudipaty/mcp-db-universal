@@ -34,7 +34,7 @@ If both commands return version numbers, you're good to go
 ### 1. Install globally
 
 ```bash
-npm install -g fm-db-mcp-universa
+npm install -g fm-db-mcp-universal
 
 # Then install your DB driver:
 npm install -g pg           # PostgreSQL
@@ -74,18 +74,48 @@ Create `.vscode/mcp.json` in your workspace:
 ```json
 {
   "servers": {
-    "fmcprod-db": {
+    "oracle-db": {
       "command": "npx",
-      "args": ["fm-db-mcp-universal"],
+      "args": [
+        "fm-db-mcp-universal"
+      ],
       "env": {
-        "DB_CLIENT":   "oracle",
-        "DB_HOST":     "localhost",
-        "DB_PORT":     "1521",
-        "DB_NAME":     "orcl",
-        "DB_USER":     "xxx",
-        "DB_PASSWORD": "xxx"
+        "DB_CLIENT": "oracle",
+        "DB_HOST": "localhost",
+        "DB_PORT": "1521",
+        "DB_NAME": "orcl",
+        "DB_USER": "FMCPROD1",
+        "DB_PASSWORD": "FMCPROD1"
       }
-    }
+    },
+    "postgres-db": {
+      "command": "npx",
+      "args": [
+        "fm-db-mcp-universal"
+      ],
+      "env": {
+        "DB_CLIENT": "postgres",
+        "DB_HOST": "localhost",
+        "DB_PORT": "5432",
+        "DB_USER": "postgres",
+        "DB_PASSWORD": "password",
+        "DB_NAME": "postgres"
+      }
+    },
+    "mssql-db": {
+      "command": "npx",
+      "args": [
+        "fm-db-mcp-universal"
+      ],
+      "env": {
+        "DB_CLIENT": "mssql",
+        "DB_HOST": "localhost",
+        "DB_PORT": "1433",
+        "DB_USER": "sa",
+        "DB_PASSWORD": "sadmin",
+        "DB_NAME": "ALLMERGE"
+      }
+    },
   }
 }
 ```
